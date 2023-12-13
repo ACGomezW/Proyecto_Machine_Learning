@@ -9,7 +9,7 @@ Este proyecto abarca una serie de pasos para desarrollar un proceso de Data Engi
 Se plantea desde los propietarios de la plataforma 'Steam Games' la necesidad de contar con los datos en una API para poder ser consumidos. Por otro lado existe la necesidad de poder realizar las consultas al modelo de recomendación para lo cual resulta necesario hacer un deploy de la API.
 
 ### Dataset
-Son tres (3) dataset que poseen información acerca de juegos, reseñas y distintos atributos de los mismas, en formato JSON.Los mismos se adjuntan el el [siguiente enlace](https://drive.google.com/drive/folders/1r0yc_x2rVsMoTVIUFw3W3Zh0UaXi7wvF?usp=drive_link), ya que por su tamaño no pudieron ser agregados al presente repositorio. 
+Son tres (3) dataset que poseen información acerca de juegos, reseñas y distintos atributos de los mismas, en formato JSON. Los mismos se adjuntan el el [siguiente enlace](https://drive.google.com/drive/folders/1r0yc_x2rVsMoTVIUFw3W3Zh0UaXi7wvF?usp=drive_link), ya que por su tamaño no pudieron ser agregados al presente repositorio. 
 
 
 ### Data Engineering
