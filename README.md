@@ -46,12 +46,11 @@ El código de éstas funciones se puede visualizar en el [siguiente archivo](htt
 ### Modelo de recomendación - Machine Learning
 Para el modelo de recomendación de juegos Machine Learning se utilizó una muestra aleatoria de los datos de preferencias de usuarios, utilizando el método 'similitud de coseno' con una matriz de 50 x 50, obteniendo con una función los juegos recomendados al usuario, según sus preferencias anteriores.  
 
-Se pueden visualizar los códigos realizados en el [siguiente archivo](
+Se pueden visualizar los códigos realizados en el [siguiente archivo](https://github.com/ACGomezW/Proyecto_Machine_Learning/blob/main/ParaML.ipynb)
 
-Deployment
-Para el deploy de la API, se utilizó la plataforma Render. Los datos están listos para ser consumidos y consultados a partir del siguiente link
+### Deployment
+Para el deploy de la API, se utilizó la plataforma Render. Los datos están listos para ser consumidos y consultados a partir del siguiente [link](https://api-pi1.onrender.com)
 
-Link al Deployment
 
-Video
-Para consultar sobre los pasos del proceso y una explicación más profunda es posible acceder al siguiente enlace
+### Video
+Para consultar sobre los pasos del proceso y una explicación más profunda es posible acceder al [siguiente enlace](https://www.youtube.com/watch?v=rZvtQSl0xxE&t=121s)
