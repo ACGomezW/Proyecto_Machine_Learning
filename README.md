@@ -40,15 +40,13 @@ Se solicitó efectuar la disponibilización de los siguientes endpoints a travé
 
 * def sentiment_analysis(anio:int):Crear una función que según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. Ejemplo: {Negative = [cantidad_reseñas], Neutral = [cantidad_reseñas], Positive = [cantidad_reseñas]}
 
-El código de éstas funciones se puede visualizar en el archivo [para](docs/ParaFunciones.ipynb)
+El código de éstas funciones se puede visualizar en el [siguiente archivo](https://github.com/ACGomezW/Proyecto_Machine_Learning/blob/main/ParaFunciones.ipynb))
 
 
-Modelo de recomendación - Machine Learning
-Para el modelo de recomendación de películas Machine Learning se utilizó como criterio filtrar el dataset para las películas estrenadas a partir de 1970 release_year (por mostrar una gran crecimiento a partir de dicho año) y posteriormente filtros por puntajes obtenidos por las mismas vote_average para concluir seleccionando 10.000 títulos.
+### Modelo de recomendación - Machine Learning
+Para el modelo de recomendación de juegos Machine Learning se utilizó una muestra aleatoria de los datos de preferencias de usuarios, utilizando el método 'similitud de coseno' con una matriz de 50 x 50, obteniendo con una función los juegos recomendados al usuario, según sus preferencias anteriores.  
 
-Se trabajó uniendo los textos de las columnas overview, genres y production_companies para concatenarlos en un solo campo de modo que el algoritmo pueda trabajar sobre el mismo combined_features. Una vez con el dataframe listo se procedió a construir 2 modelos para efectuar recomendaciones de películas (uno basado en la similitud del coseno y otro basado en el algoritmo de K-Vecinos).
-
-Se pueden visualizar los códigos realizados en el siguiente archivo
+Se pueden visualizar los códigos realizados en el [siguiente archivo](
 
 Deployment
 Para el deploy de la API, se utilizó la plataforma Render. Los datos están listos para ser consumidos y consultados a partir del siguiente link
