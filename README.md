@@ -40,6 +40,8 @@ Se solicitó efectuar la disponibilización de los siguientes endpoints a travé
 
 * def sentiment_analysis(anio:int):Crear una función que según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. Ejemplo: {Negative = [cantidad_reseñas], Neutral = [cantidad_reseñas], Positive = [cantidad_reseñas]}
 
+El código de éstas funciones se puede visualizar en el archivo [para](docs/ParaFunciones.ipynb)
+
 
 Modelo de recomendación - Machine Learning
 Para el modelo de recomendación de películas Machine Learning se utilizó como criterio filtrar el dataset para las películas estrenadas a partir de 1970 release_year (por mostrar una gran crecimiento a partir de dicho año) y posteriormente filtros por puntajes obtenidos por las mismas vote_average para concluir seleccionando 10.000 títulos.
