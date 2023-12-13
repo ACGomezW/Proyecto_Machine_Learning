@@ -22,34 +22,24 @@ Para el trabajo de Data Engineering se procedió a efectuar una serie de transfo
 * Se corrigió formato de fechas.
 * Se corrigió formato Mayúsculas y Minúsculas
 * En el archivo Reviews.json, se utilizó la biblioteca NLTK (***Natural Language Toolkit***) y la función **SentimentIntensityAnalyzer** para aplicar análisis de sentimiento y clasificar la columna 'Reviews', que contiene reseñas realizadas por los usuarios de los juegos, en positivas, neutrales y negativas. 
-* Se guardaron esos dataset en [tres diferentes archivos formato CSV](https://drive.google.com/drive/folders/1aivJ9Njk-SeYhs0377LfuY_aA3m83q3M?usp=drive_link).
+* Se guardaron esos dataset en tres diferentes archivos formato CSV. El archivo Items.csv no pudo ser agregado al repositorio por su tamaño. Para acceder al mismo, siga el [siguiente link](https://drive.google.com/file/d/1sSZjSbrGfwv7JrilfZfdxcFbyO_rYuJy/view?usp=sharing)
 * Posteriormente se unieron los tres dataset en uno solo, eliminando nuevamente datos duplicados, o innecesarios para el análisis.
-* Se guardó la información obtenida en el archivo [Total.csv](https://drive.google.com/file/d/18QNPhP2TWKsvAgkMtoyKS85_Cd14dWgP/view?usp=drive_link)
+* Se guardó la información obtenida en el archivo Total.csv.
   
 
 ### API
 Se solicitó efectuar la disponibilización de los siguientes endpoints a través del Framework ***FastAPI***:
 
-def peliculas_mes(mes): '''Se ingresa el mes y la funcion retorna la cantidad de peliculas que se estrenaron ese mes (nombre del mes, en str, ejemplo 'enero') historicamente''' return {'mes':mes, 'cantidad':respuesta}
+* def PlayTimeGenre(genero:str): Crear una función con la que se obtiene el año de lanzamiento con más horas jugadas para un género dado. Ejemplo: {"Año de lanzamiento con más horas jugadas para [genero]": [año]}
 
-def peliculas_dia(dia): '''Se ingresa el dia y la funcion retorna la cantidad de peliculas que se estrenaron ese dia (de la semana, en str, ejemplo 'lunes') historicamente''' return {'dia':dia, 'cantidad':respuesta}
+* def UserForGenre(genero: str): Crear una función con la que se obtiene el usuario con más horas jugadas y la acumulación de las mismas por año, para un género dado. Ejemplo: {"Usuario con más horas jugadas para [genero]": [usuario]} "Acumulación de horas jugadas por año para [genero]": [año: horas]
+  
+* def UsersRecommend(anio: int): Crear una función que devuelva el top 3 de juegos MÁS recomendados por usuarios para el año dado. Ejemplo: {"Puesto 1": 'nombre de juego', "Puesto 2": 'nombre de juego', "Puesto 3": 'nombre de juego'}
 
-def franquicia(franquicia): '''Se ingresa la franquicia, retornando la cantidad de peliculas, ganancia total y promedio''' return {'franquicia':franquicia, 'cantidad':respuesta, 'ganancia_total':respuesta, 'ganancia_promedio':respuesta}
+* def UsersNoRecommend(anio: int): Crear una función que devuelva el top 3 de juegos MENOS recomendados por usuarios para el año dado. Ejemplo: {"Puesto 1": 'nombre de juego', "Puesto 2": 'nombre de juego', "Puesto 3": 'nombre de juego'}
 
-def peliculas_pais(pais): '''Ingresas el pais, retornando la cantidad de peliculas producidas en el mismo''' return {'pais':pais, 'cantidad':respuesta}
+* def sentiment_analysis(anio:int):Crear una función que según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. Ejemplo: {Negative = [cantidad_reseñas], Neutral = [cantidad_reseñas], Positive = [cantidad_reseñas]}
 
-def productoras(productora): '''Ingresas la productora, retornando la ganancia total y la cantidad de peliculas que produjeron''' return {'productora':productora, 'ganancia_total':respuesta, 'cantidad':respuesta}
-
-def retorno(pelicula): '''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''' return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}
-
-El código para correr la API dentro de FastAPI se puede visualizar aquí
-
-Análisis exploratorio de datos
-A los efectos de poder entender los datos presentados, se realizaron una serie de análisis y estudios sobre las variables del dataset a los efectos de poder encontrar relaciones entre los datos y comprender la relevancia de los mismos. Dentro de los análisis efectuados se encuentran distribuciones de frecuencias de las variables numéricas, identificación de variables categóricas y sus valores, correlación entre variables, análisis temporales y por categoría.
-
-Se destaca que se efectuaron algunas transformaciones diferentes a las realizadas para la sección de Engineering.
-
-Se pueden visualizar las transformaciones y los análisis realizados en el siguiente archivo
 
 Modelo de recomendación - Machine Learning
 Para el modelo de recomendación de películas Machine Learning se utilizó como criterio filtrar el dataset para las películas estrenadas a partir de 1970 release_year (por mostrar una gran crecimiento a partir de dicho año) y posteriormente filtros por puntajes obtenidos por las mismas vote_average para concluir seleccionando 10.000 títulos.
