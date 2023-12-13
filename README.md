@@ -22,7 +22,7 @@ Para el trabajo de Data Engineering se procedió a efectuar una serie de transfo
 * Se corrigió formato de fechas.
 * Se corrigió formato Mayúsculas y Minúsculas
 * En el archivo Reviews.json, se utilizó la biblioteca NLTK (***Natural Language Toolkit***) y la función **SentimentIntensityAnalyzer** para aplicar análisis de sentimiento y clasificar la columna 'Reviews', que contiene reseñas realizadas por los usuarios de los juegos, en positivas, neutrales y negativas. 
-* Se guardaron esos dataset en tres diferentes archivos formato CSV. [Games.csv]. [Reviews.csv]. El archivo Items.csv no pudo ser agregado al repositorio por su tamaño. Para acceder al mismo, siga el [siguiente link](https://drive.google.com/file/d/1sSZjSbrGfwv7JrilfZfdxcFbyO_rYuJy/view?usp=sharing)
+* Se guardaron esos dataset en tres diferentes archivos formato CSV. [Games.csv](https://github.com/ACGomezW/Proyecto_Machine_Learning/blob/main/Games%20(1).csv), [Reviews.csv](. El archivo Items.csv no pudo ser agregado al repositorio por su tamaño. Para acceder al mismo, siga el [siguiente link](https://drive.google.com/file/d/1sSZjSbrGfwv7JrilfZfdxcFbyO_rYuJy/view?usp=sharing)
 * Posteriormente se unieron los tres dataset en uno solo, eliminando nuevamente datos duplicados, o innecesarios para el análisis.
 * Se guardó la información obtenida en el archivo Total.csv.
   
